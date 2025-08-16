@@ -1,32 +1,38 @@
 import { useEffect, useState } from "react";
-import Step1 from "../components/steps/step-1";
 import Button from "../components/ui/Button";
 import Icon from "../components/ui/Icon";
 import ProgressStepAuth from "../components/ui/progress-step-auth";
 import useStepProgressAuth from "../hooks/useStepProgressAuth";
+import Step1 from "../components/steps/step-1";
 import Step2 from "../components/steps/step-2";
 import Step3 from "../components/steps/step-3";
 import Step4 from "../components/steps/step-4";
+
 const SignUpPage = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [nextStep, setNextStep] = useState<boolean>(false);
-  const totalStep = 4;
   const { progressData, setProgressData } = useStepProgressAuth();
+
+  const totalStep = 4;
+
   const handleSavePreviusStep = () => {
     const findStep = progressData.find((step) => step.step === currentStep - 1);
     findStep.isSuccess = true;
     setProgressData([...progressData]);
   };
+
   const incrementCurrentStep = () => {
-    if (currentStep < 4) {
+    if (currentStep < totalStep) {
       setCurrentStep((prevState) => prevState + 1);
     }
   };
+
   useEffect(() => {
     if (currentStep !== 1) {
       handleSavePreviusStep();
     }
   }, [currentStep]);
+
   const getCurrentStep = () => {
     switch (currentStep) {
       case 1: {
@@ -43,11 +49,12 @@ const SignUpPage = () => {
       }
     }
   };
+
   return (
     <section className="h-screen p-[20px_35px_30px_35px] bg-[#F4F9FD]">
       <div className="flex h-full gap-x-8">
         <div className="bg-[#3F8CFF] w-[100%] pt-[60px] rounded-[24px] max-w-[25%] pl-[40px]">
-          <div className="flex flex-col gap-y-14 h-full items-start">
+          <div className="flex flex-col items-start h-full gap-y-14">
             <div className="mt-4 text-white gap-x-8">
               <Icon.companyLogo />
             </div>

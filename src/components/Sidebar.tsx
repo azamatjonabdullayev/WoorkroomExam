@@ -17,7 +17,11 @@ const Sidebar: React.FC = () => {
       {/* Logo */}
       <div className="mb-8">
         <Link to={"/"} className="block w-full cursor-pointer">
-          <img src="/logo.svg" alt="logo" className="w-[50px] h-[50px]" />
+          <img
+            src="/company-logo-blue.svg"
+            alt="logo"
+            className="w-[50px] h-[50px]"
+          />
         </Link>
       </div>
 

@@ -6,6 +6,7 @@ import InputMask from "../ui/input-mask";
 import OtpInput from "../ui/otp-input";
 import { toast } from "react-toastify";
 import CodeTimer from "../code-timer";
+
 const Step1 = () => {
   const [canSendOtp, setCanSendOtp] = useState<boolean>(true);
   const {
