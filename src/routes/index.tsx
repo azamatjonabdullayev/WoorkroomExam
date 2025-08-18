@@ -5,6 +5,7 @@ import DashboardPage from "../pages/DashboardPage";
 import SignInPage from "../pages/SignInPage";
 import SignUpPage from "../pages/SignUpPage";
 import ProtectedRouteComponent from "../components/protected.route";
+import MyProfile from "../pages/MyProfile";
 
 export const routes = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const routes = createBrowserRouter([
           {
             index: true,
             element: <DashboardPage />,
+          },
+          {
+            path: "/projects",
+            element: <MyProfile />,
           },
         ],
       },
