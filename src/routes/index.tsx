@@ -24,7 +24,7 @@ export const routes = createBrowserRouter([
             element: <DashboardPage />,
           },
           {
-            path: "/projects",
+            path: "/profile",
             element: <MyProfile />,
           },
         ],

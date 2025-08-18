@@ -5,7 +5,6 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { LuFilter } from "react-icons/lu";
 import btn3Image from "/profile-3-btn.svg";
 import projectImg from "/Project.svg";
-import { Link } from "react-router-dom";
 
 const MyProfile: React.FC = (): JSX.Element => {
   return (
