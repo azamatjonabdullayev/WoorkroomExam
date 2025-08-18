@@ -8,7 +8,7 @@ const Header: React.FC = (): JSX.Element => {
   const { Option } = Select;
 
   return (
-    <header className="flex items-center justify-between ">
+    <header className="sticky flex items-center justify-between top-5">
       <div className="flex items-center gap-1 px-5 py-3 bg-white w-103 rounded-2xl">
         <IoSearch className="size-6 text-[#0A1629]" />
         <input
